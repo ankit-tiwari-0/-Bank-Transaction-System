@@ -17,7 +17,7 @@ const accountRouter = require("./routes/account.routes")
  * - use
  */
 app.use("/api/auth", authRouter)
-app.use("/api/accout", accountRouter)
+app.use("/api/account", accountRouter)
 
 
 module.exports = app
