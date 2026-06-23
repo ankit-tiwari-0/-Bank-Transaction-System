@@ -40,7 +40,7 @@ const sendEmail = async (to, subject, text, html) => {
 };
 
 async function sendRegistrationEmail(userEmail, name) {
-    const subject = "🎉 Welcome to Bank Transaction System";
+    const subject = "Welcome to Bank Transaction System";
 
     const text = `
 Hello ${name},
@@ -102,20 +102,25 @@ Your account has been created successfully.
 You can now securely manage transactions and access your account anytime.
 </p>
 
-<div style="text-align:center;margin:35px 0;">
-<a href="http://localhost:5173"
+<div
 style="
-background:#2563eb;
-color:white;
-text-decoration:none;
-padding:14px 30px;
+background:#eff6ff;
+border-left:4px solid #2563eb;
+padding:20px;
 border-radius:8px;
-font-size:16px;
-font-weight:bold;
-display:inline-block;
+margin:30px 0;
 ">
-Open Dashboard
-</a>
+
+<strong style="color:#1e3a8a;">
+Account Successfully Created
+</strong>
+
+<p style="color:#4b5563;line-height:1.7;margin-bottom:0;">
+Your registration has been completed successfully.
+Our web platform is currently under development and will be available shortly.
+We appreciate your patience and look forward to serving you.
+</p>
+
 </div>
 
 <hr style="border:none;border-top:1px solid #e5e7eb;">
@@ -156,4 +161,4 @@ style="background:#f9fafb;padding:20px;color:#9ca3af;font-size:13px;">
 }
 
 module.exports = {
-    sendEmail};
+    sendRegistrationEmail};
