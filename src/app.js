@@ -12,12 +12,14 @@ app.use(cookie())
  */
 const authRouter = require("./routes/auth.routes")
 const accountRouter = require("./routes/account.routes")
+const transactionRouters = require("./routes/transaction.routes")
 
 /**
  * - use
  */
 app.use("/api/auth", authRouter)
 app.use("/api/account", accountRouter)
+app.use("/api/transaction", transactionRouters)
 
 
 module.exports = app

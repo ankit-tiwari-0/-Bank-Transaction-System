@@ -5,9 +5,9 @@ const transactioncontroller = require('../controllers/transaction.controller')
 
 const transaction = Router()
 
-transactionRouter.post("/", authMiddleware.authMiddleware, transactioncontroller.createTransaction)
+transaction.post("/", authMiddleware.authMiddleware, transactioncontroller.createTransaction)
 
 
-transactionRouter.post("/system", authMiddleware.authSystemUserMiddleware,transactioncontroller.createInitialFundsTransaction )
+transaction.post("/system", authMiddleware.authSystemUserMiddleware,transactioncontroller.createInitialFundsTransaction )
 
-module.exports = transactionRouter;
+module.exports = transaction;
