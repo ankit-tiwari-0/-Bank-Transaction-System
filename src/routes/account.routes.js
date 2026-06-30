@@ -13,13 +13,13 @@ router.post("/", authMiddleware.authMiddleware, AccountController.createAccountC
  * - Get all accounts of the logged-in user
  * - Protected Route
  */
-router.get("/", authMiddleware.authMiddleware, accountController.getUserAccountsController)
+router.get("/", authMiddleware.authMiddleware, AccountController.getUserAccountsController)
 
 
 /**
  * - GET /api/accounts/balance/:accountId
  */
-router.get("/balance/:accountId", authMiddleware.authMiddleware, accountController.getAccountBalanceController)
+router.get("/balance/:accountId", authMiddleware.authMiddleware, AccountController.getAccountBalanceController)
 
 
 
